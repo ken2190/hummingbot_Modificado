@@ -1,0 +1,67 @@
+2020-06-07 21:46:54,340 - 1653 - hummingbot.core.utils.async_utils - ERROR - Unhandled error in background task: module 'ccxt.async_support' has no attribute 'bitrex'
+Traceback (most recent call last):
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/core/utils/async_utils.py", line 9, in safe_wrapper
+    return await c
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 82, in start_check
+    await self.start_market_making(self.strategy_name)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 90, in start_market_making
+    start_strategy(self)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/strategy/arbitrage/start.py", line 18, in start
+    vectorDeTransacciones,profit =transaccionesOptimas(['binance','kraken','bitrex'],moneda,monto)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 57, in transaccionesOptimas
+    vectorTransactions =consultarCamino(listaDeExchange, inicio, cantidad, False)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 21, in consultarCamino
+    graph = create_weighted_multi_exchange_digraph(exchanges, name=True, log=True,fees=True)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/multi_exchange.py", line 55, in create_weighted_multi_exchange_digraph
+    exchanges = [{'object': getattr(ccxt, exchange)()} for exchange in exchanges]
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/multi_exchange.py", line 55, in <listcomp>
+    exchanges = [{'object': getattr(ccxt, exchange)()} for exchange in exchanges]
+AttributeError: module 'ccxt.async_support' has no attribute 'bitrex'
+2020-06-07 22:00:00,914 - 3136 - hummingbot.core.utils.async_utils - ERROR - Unhandled error in background task: This event loop is already running
+Traceback (most recent call last):
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/core/utils/async_utils.py", line 9, in safe_wrapper
+    return await c
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 82, in start_check
+    await self.start_market_making(self.strategy_name)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 90, in start_market_making
+    start_strategy(self)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/strategy/arbitrage/start.py", line 19, in start
+    vectorDeTransacciones,profit =transaccionesOptimas(['binance','kraken','bittrex'],moneda,monto)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 57, in transaccionesOptimas
+    vectorTransactions =consultarCamino(listaDeExchange, inicio, cantidad, False)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 21, in consultarCamino
+    graph = create_weighted_multi_exchange_digraph(exchanges, name=True, log=True,fees=True)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/multi_exchange.py", line 64, in create_weighted_multi_exchange_digraph
+    loop.run_until_complete(asyncio.gather(*futures))
+  File "/home/lag/anaconda3/envs/hummingbot/lib/python3.8/asyncio/base_events.py", line 592, in run_until_complete
+    self._check_running()
+  File "/home/lag/anaconda3/envs/hummingbot/lib/python3.8/asyncio/base_events.py", line 552, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+2020-06-07 22:00:01,656 - 3136 - ccxt.base.exchange - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2020-06-07 22:00:02,207 - 3136 - ccxt.base.exchange - WARNING - kraken requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2020-06-07 22:00:02,354 - 3136 - ccxt.base.exchange - WARNING - bittrex requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2020-06-07 22:48:23,973 - 4681 - hummingbot.core.utils.async_utils - ERROR - Unhandled error in background task: This event loop is already running
+Traceback (most recent call last):
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/core/utils/async_utils.py", line 9, in safe_wrapper
+    return await c
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 82, in start_check
+    await self.start_market_making(self.strategy_name)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/client/command/start_command.py", line 90, in start_market_making
+    start_strategy(self)
+  File "/home/lag/REPOS/hummingbot_Modificado/hummingbot/strategy/arbitrage/start.py", line 19, in start
+    vectorDeTransacciones,profit =transaccionesOptimas(['binance','kraken','bittrex'],moneda,monto)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 57, in transaccionesOptimas
+    vectorTransactions =consultarCamino(listaDeExchange, inicio, cantidad, False)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/arbitrage_multiple_exchanges_multiple_coins.py", line 21, in consultarCamino
+    graph = create_weighted_multi_exchange_digraph(exchanges, name=True, log=True,fees=True)
+  File "/home/lag/REPOS/hummingbot_Modificado/arbitrageCore/multi_exchange.py", line 64, in create_weighted_multi_exchange_digraph
+    loop.run_until_complete(asyncio.gather(*futures))
+  File "/home/lag/anaconda3/envs/hummingbot/lib/python3.8/asyncio/base_events.py", line 592, in run_until_complete
+    self._check_running()
+  File "/home/lag/anaconda3/envs/hummingbot/lib/python3.8/asyncio/base_events.py", line 552, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+2020-06-07 22:48:24,567 - 4681 - ccxt.base.exchange - WARNING - binance requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2020-06-07 22:48:25,075 - 4681 - ccxt.base.exchange - WARNING - kraken requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).
+2020-06-07 22:48:25,324 - 4681 - ccxt.base.exchange - WARNING - bittrex requires to release all resources with an explicit call to the .close() coroutine. If you are using the exchange instance with async coroutines, add exchange.close() to your code into a place when you're done with the exchange and don't need the exchange instance anymore (at the end of your async coroutine).

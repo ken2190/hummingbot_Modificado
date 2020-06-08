@@ -152,4 +152,7 @@ dependencies:
     - zope-interface==4.7.1
     - git+https://github.com/CoinAlpha/python-signalr-client.git
     - https://hummingbot-python.s3-us-west-2.amazonaws.com/hummingsim-20200308-cp38-cp38-linux_x86_64.whl
+    - networkx==2.4
+    - ccxt==1.29.51
+    - stem==1.8.0
 prefix: /home/martin_kou/anaconda3/envs/hummingbot
